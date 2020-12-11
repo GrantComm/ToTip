@@ -12,9 +12,9 @@ class ServiceCard extends StatelessWidget {
           color: Colors.white,
           boxShadow: <BoxShadow>[
             BoxShadow(
-              color: Colors.black,
-              offset: Offset(1.0, 6.0),
-              blurRadius: 30.0,
+              color: Colors.grey,
+              offset: Offset(0.0, 6.0),
+              blurRadius: 4.0,
             ),
           ],
           borderRadius: BorderRadius.all(Radius.circular(20))),

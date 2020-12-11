@@ -12,7 +12,12 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TopBar(title: "Service Recieved", icon: Icon(Icons.help)),
+      appBar: TopBar(
+          title: "Service Recieved",
+          icon: Icon(
+            Icons.help,
+            color: Colors.white,
+          )),
       body: Container(
         color: Colors.white60,
         child: ServiceSelector(),

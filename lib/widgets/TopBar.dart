@@ -17,8 +17,11 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Theme.of(context).primaryColor,
       actions: [
         IconButton(
-          icon: icon ?? Icon(Icons.sim_card_alert),
-          color: Colors.white,
+          icon: icon ??
+              Icon(
+                Icons.sim_card_alert,
+                color: Colors.white,
+              ),
         )
       ],
     );
