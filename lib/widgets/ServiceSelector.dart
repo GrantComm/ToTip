@@ -21,7 +21,7 @@ class _ServiceSelectorState extends State<ServiceSelector> {
       'Utilities': [
         ['Gas', 'images/gas.png']
       ],
-      'Personal Services': [
+      'Personal': [
         ['Barber Shop', 'images/barber.png'],
         ['Nail Salon', 'images/nail.png']
       ]
