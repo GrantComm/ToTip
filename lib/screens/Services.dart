@@ -3,24 +3,28 @@ import 'package:big_tip_app/widgets/TopBar.dart';
 import 'package:big_tip_app/screens/Calculator.dart';
 import 'package:big_tip_app/widgets/ServiceSelector.dart';
 
-class Home extends StatefulWidget {
+class Services extends StatefulWidget {
+  String category;
+  Services({@required this.category});
   @override
-  _HomeState createState() => _HomeState();
+  _ServicesState createState() => _ServicesState();
 }
 
-class _HomeState extends State<Home> {
+class _ServicesState extends State<Services> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: TopBar(
-          title: "Service Recieved",
+          title: "Services",
           icon: Icon(
             Icons.help,
             color: Colors.white,
           )),
       body: Container(
         color: Colors.white60,
-        child: ServiceSelector(),
+        child: ServiceSelector(
+          selectedCategory: widget.category,
+        ),
       ),
     );
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:big_tip_app/widgets/TopBar.dart';
-import 'package:big_tip_app/screens/Home.dart';
+import 'package:big_tip_app/screens/Services.dart';
 import 'package:big_tip_app/classes/Transaction.dart';
 
 class Calculator extends StatefulWidget {
@@ -28,6 +28,7 @@ class _CalculatorState extends State<Calculator> {
   }
 
   navigate(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => Home()));
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => Services()));
   }
 }

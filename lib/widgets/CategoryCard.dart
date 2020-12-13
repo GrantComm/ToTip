@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ServiceCard extends StatelessWidget {
+class CategoryCard extends StatelessWidget {
   String title;
   String icon;
-  String category;
-  ServiceCard({this.title, this.icon, this.category});
+  CategoryCard({this.title, this.icon});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,13 +20,13 @@ class ServiceCard extends StatelessWidget {
       child: Column(
         children: [
           Transform(
-            transform: Matrix4.translationValues(0.0, 15.0, 0.0),
+            transform: Matrix4.translationValues(-10.0, 50.0, 0.0),
             child: Text(title,
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.headline2),
           ),
           Transform(
-              transform: Matrix4.translationValues(0.0, 25.0, 0.0),
+              transform: Matrix4.translationValues(-140.0, -20.0, 0.0),
               child: Image(
                 height: 90,
                 image: AssetImage(icon),

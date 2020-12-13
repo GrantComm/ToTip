@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:big_tip_app/screens/Home.dart';
+import 'package:big_tip_app/screens/Services.dart';
+import 'package:big_tip_app/screens/Categories.dart';
 
 void main() {
   runApp(BigTip());
@@ -11,7 +12,7 @@ class BigTip extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "BigTip",
-      home: Home(),
+      home: Categories(),
       theme: ThemeData(
           primarySwatch: tangerine,
           accentColor: Colors.white,
