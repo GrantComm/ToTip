@@ -27,7 +27,7 @@ class ServiceCard extends StatelessWidget {
                 style: Theme.of(context).textTheme.headline2),
           ),
           Transform(
-              transform: Matrix4.translationValues(0.0, 25.0, 0.0),
+              transform: Matrix4.translationValues(0.0, 40.0, 0.0),
               child: Image(
                 height: 90,
                 image: AssetImage(icon),
