@@ -23,12 +23,8 @@ class _CalculatorState extends State<Calculator> {
       ),
       body: Container(
         color: Colors.white60,
+        child: Text(widget.service),
       ),
     );
-  }
-
-  navigate(BuildContext context) {
-    Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => Services()));
   }
 }
