@@ -1,7 +1,10 @@
+import 'package:big_tip_app/widgets/SubmitButton.dart';
 import 'package:flutter/material.dart';
 
 class KeyPad extends StatefulWidget {
+  String service;
   String total = '0';
+  KeyPad(this.service);
   @override
   _KeyPadState createState() => _KeyPadState();
 }
@@ -39,6 +42,12 @@ class _KeyPadState extends State<KeyPad> {
               );
             }),
           ),
+          Transform(
+              transform: Matrix4.translationValues(0.0, -50.0, 0.0),
+              child: SubmitButton(
+                service: widget.service,
+                finalAmount: double.parse(widget.total),
+              ))
         ],
       ),
     );

@@ -27,10 +27,7 @@ class _CalculatorState extends State<Calculator> {
         color: Colors.white60,
         child: Column(
           children: [
-            KeyPad(),
-            Transform(
-                transform: Matrix4.translationValues(0.0, -50.0, 0.0),
-                child: SubmitButton())
+            KeyPad(widget.service),
           ],
         ),
       ),

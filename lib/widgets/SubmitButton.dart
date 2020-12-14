@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:big_tip_app/screens/Result.dart';
+import 'package:big_tip_app/classes/Summary.dart';
 
 class SubmitButton extends StatefulWidget {
+  String service;
+  double finalAmount;
+  SubmitButton({@required this.service, this.finalAmount});
   @override
   _SubmitButtonState createState() => _SubmitButtonState();
 }
@@ -16,7 +21,9 @@ class _SubmitButtonState extends State<SubmitButton> {
       ),
       color: Theme.of(context).primaryColor,
       onPressed: () {
-        print('Submit Data');
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) =>
+                Result(summary: Summary(widget.service, widget.finalAmount))));
       },
     );
   }
