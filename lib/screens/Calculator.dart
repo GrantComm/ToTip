@@ -3,7 +3,6 @@ import 'package:big_tip_app/widgets/TopBar.dart';
 import 'package:big_tip_app/screens/Services.dart';
 import 'package:big_tip_app/classes/Transaction.dart';
 import 'package:big_tip_app/widgets/KeyPad.dart';
-import 'package:big_tip_app/widgets/TotalDisplay.dart';
 import 'package:big_tip_app/widgets/SubmitButton.dart';
 
 class Calculator extends StatefulWidget {
