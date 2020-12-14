@@ -28,7 +28,6 @@ class _CalculatorState extends State<Calculator> {
         color: Colors.white60,
         child: Column(
           children: [
-            TotalDisplay("23.00"),
             KeyPad(),
             Transform(
                 transform: Matrix4.translationValues(0.0, -50.0, 0.0),
