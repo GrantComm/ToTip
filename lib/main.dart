@@ -17,7 +17,9 @@ class BigTip extends StatelessWidget {
           primarySwatch: tangerine,
           accentColor: Colors.white,
           textTheme: TextTheme(
+              headline6: TextStyle(fontSize: 60, color: tangerine),
               headline5: TextStyle(fontSize: 35, color: Colors.white),
+              headline4: TextStyle(fontSize: 45, color: Colors.white),
               headline3: TextStyle(fontSize: 45, color: tangerine),
               headline2: TextStyle(fontSize: 25, color: tangerine),
               headline1: TextStyle(

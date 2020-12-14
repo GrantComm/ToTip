@@ -16,14 +16,21 @@ class _ServiceSelectorState extends State<ServiceSelector> {
     var services = {
       'Food/Drink': [
         ['Bar', 'images/liquor.png'],
-        ['Dining', 'images/cutlery.png']
+        ['Dining', 'images/cutlery.png'],
+        ['Carryout', 'images/carryout.png']
       ],
       'Utilities': [
-        ['Gas', 'images/gas.png']
+        ['Gas', 'images/gas.png'],
+        ['Housekeeping', 'images/cleaning.png'],
+        ['Landscaping', 'images/mower.png'],
+        ['Maintenance', 'images/appliance.png']
       ],
       'Personal': [
         ['Barber Shop', 'images/barber.png'],
-        ['Nail Salon', 'images/nail.png']
+        ['Hair Salon', 'images/hair.png'],
+        ['Nail Salon', 'images/nail.png'],
+        ['Waxing', 'images/wax.png'],
+        ['Training', 'images/training.png'],
       ]
     };
     return Container(

@@ -54,6 +54,13 @@ flutter:
     - images/food.png
     - images/carryout.png
     - images/utility.png
+    - images/mower.png
+    - images/training.png
+    - images/wax.png
+    - images/hair.png
+    - images/cleaning.png
+    - images/appliance.png
+    - images/personalcare.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

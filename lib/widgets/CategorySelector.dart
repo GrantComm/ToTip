@@ -15,7 +15,7 @@ class _CategorySelectorState extends State<CategorySelector> {
     var categories = [
       ["Food/Drink", "images/food.png"],
       ["Utilities", "images/utility.png"],
-      ["Personal", "images/barber.png"]
+      ["Personal", "images/personalcare.png"]
     ];
     return Container(
       child: ListView.builder(
