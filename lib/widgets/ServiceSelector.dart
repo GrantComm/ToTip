@@ -23,7 +23,8 @@ class _ServiceSelectorState extends State<ServiceSelector> {
         ['Gas', 'images/gas.png'],
         ['Housekeeping', 'images/cleaning.png'],
         ['Landscaping', 'images/mower.png'],
-        ['Maintenance', 'images/appliance.png']
+        ['Maintenance', 'images/appliance.png'],
+        ['Car', 'images/car.png']
       ],
       'Personal': [
         ['Barber Shop', 'images/barber.png'],

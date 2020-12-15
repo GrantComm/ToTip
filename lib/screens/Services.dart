@@ -19,7 +19,17 @@ class _ServicesState extends State<Services> {
           icon: Icon(
             Icons.help,
             color: Colors.white,
-          )),
+          ),
+          function: () {
+            showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    content: Text(
+                        'Please select the service that you have recieved.'),
+                  );
+                });
+          }),
       body: Container(
         color: Colors.white60,
         child: ServiceSelector(

@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 class TopBar extends StatelessWidget implements PreferredSizeWidget {
   String title;
   Icon icon;
+  Function function;
   @override
   Size preferredSize = Size.fromHeight(kToolbarHeight);
-  TopBar({@required this.title, this.icon});
+  TopBar({@required this.title, this.icon, this.function});
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -22,6 +23,7 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
                 Icons.sim_card_alert,
                 color: Colors.white,
               ),
+          onPressed: function,
         )
       ],
     );

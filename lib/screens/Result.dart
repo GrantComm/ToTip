@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:big_tip_app/widgets/TopBar.dart';
 import 'package:big_tip_app/classes/Summary.dart';
+import 'package:big_tip_app/widgets/ResultsList.dart';
 
 class Result extends StatefulWidget {
   Summary summary;
@@ -13,21 +14,15 @@ class _ResultState extends State<Result> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TopBar(
-        title: "Summary",
-        icon: Icon(
-          Icons.done,
-          color: Colors.white,
+        appBar: TopBar(
+          title: "Summary",
+          icon: Icon(
+            Icons.done,
+            color: Colors.white,
+          ),
         ),
-      ),
-      body: Container(
-        child: Column(
-          children: [
-            Text(widget.summary.service),
-            Text(widget.summary.totalSum.toString())
-          ],
-        ),
-      ),
-    );
+        body: ResultsList(
+          summary: widget.summary,
+        ));
   }
 }
