@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class RatingCircle extends StatelessWidget {
   String ratingType;
-  RatingCircle(@required this.ratingType);
+  bool selected;
+  RatingCircle(@required this.ratingType, this.selected);
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -12,7 +13,7 @@ class RatingCircle extends StatelessWidget {
           width: 125,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(100),
-              color: Colors.white,
+              color: selected ? Theme.of(context).primaryColor : Colors.white,
               border: Border.all(color: Theme.of(context).primaryColor)),
         ),
         Text(
