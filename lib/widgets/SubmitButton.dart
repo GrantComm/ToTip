@@ -87,7 +87,7 @@ class _SubmitButtonState extends State<SubmitButton> {
       Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => Result(
               summary: Summary(widget.service, widget.finalAmount,
-                  widget.rating, place.locality))));
+                  widget.rating, place.administrativeArea))));
     } catch (e) {
       print(e);
     }

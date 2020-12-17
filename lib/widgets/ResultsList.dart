@@ -22,7 +22,7 @@ class ResultsList extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyText1,
           ),
           Text(
-            'Percentage: N/A',
+            'Percentage: ' + summary.percentage.toStringAsFixed(2) + '%',
             style: Theme.of(context).textTheme.bodyText1,
           ),
           Text(
@@ -34,7 +34,7 @@ class ResultsList extends StatelessWidget {
             color: Theme.of(context).primaryColor,
           ),
           Text(
-            'Total: N/A',
+            'Total: \$' + summary.finalSum.toStringAsFixed(2),
             style: Theme.of(context).textTheme.bodyText1,
           ),
         ],
