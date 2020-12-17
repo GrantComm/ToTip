@@ -26,7 +26,7 @@ class ResultsList extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyText1,
           ),
           Text(
-            'Location: N/A',
+            'Location: ' + summary.location,
             style: Theme.of(context).textTheme.bodyText1,
           ),
           Divider(

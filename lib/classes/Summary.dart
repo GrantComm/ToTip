@@ -1,7 +1,7 @@
 class Summary {
   double totalSum;
   String service;
-  Summary(this.service, this.totalSum);
-  // TODO: Percentage
-  // TODO: Location
+  String location;
+  Summary(this.service, this.totalSum, this.location);
+  // TODO: Calculate Percentage
 }
