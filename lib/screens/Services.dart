@@ -38,11 +38,4 @@ class _ServicesState extends State<Services> {
       ),
     );
   }
-
-  navigate(BuildContext context, String service) {
-    Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => Calculator(
-              service: service,
-            )));
-  }
 }

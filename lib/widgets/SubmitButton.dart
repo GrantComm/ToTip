@@ -10,8 +10,9 @@ class SubmitButton extends StatefulWidget {
   bool serviceEnabled;
   LocationPermission permission;
   String service;
+  String rating;
   double finalAmount;
-  SubmitButton({@required this.service, this.finalAmount});
+  SubmitButton({@required this.service, this.rating, this.finalAmount});
   @override
   _SubmitButtonState createState() => _SubmitButtonState();
 }
@@ -37,7 +38,8 @@ class _SubmitButtonState extends State<SubmitButton> {
     if (!widget.serviceEnabled) {
       Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => Result(
-              summary: Summary(widget.service, widget.finalAmount, 'N/A'))));
+              summary: Summary(
+                  widget.service, widget.finalAmount, widget.rating, 'N/A'))));
       return;
     }
 
@@ -45,7 +47,8 @@ class _SubmitButtonState extends State<SubmitButton> {
     if (widget.permission == LocationPermission.deniedForever) {
       Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => Result(
-              summary: Summary(widget.service, widget.finalAmount, 'N/A'))));
+              summary: Summary(
+                  widget.service, widget.finalAmount, widget.rating, 'N/A'))));
       return;
     }
 
@@ -55,7 +58,8 @@ class _SubmitButtonState extends State<SubmitButton> {
           widget.permission != LocationPermission.always) {
         Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => Result(
-                summary: Summary(widget.service, widget.finalAmount, 'N/A'))));
+                summary: Summary(widget.service, widget.finalAmount,
+                    widget.rating, 'N/A'))));
       }
     }
     _getLocation();
@@ -82,8 +86,8 @@ class _SubmitButtonState extends State<SubmitButton> {
       Placemark place = p[0];
       Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => Result(
-              summary: Summary(
-                  widget.service, widget.finalAmount, place.locality))));
+              summary: Summary(widget.service, widget.finalAmount,
+                  widget.rating, place.locality))));
     } catch (e) {
       print(e);
     }

@@ -6,6 +6,7 @@ class ResultsList extends StatelessWidget {
   ResultsList({this.summary});
   @override
   Widget build(BuildContext context) {
+    print(summary.rating);
     return Container(
       child: Column(
         children: [
@@ -14,7 +15,7 @@ class ResultsList extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyText1,
           ),
           Text(
-            'Rating: N/A',
+            'Rating: ' + summary.rating,
             style: Theme.of(context).textTheme.bodyText1,
           ),
           Text(

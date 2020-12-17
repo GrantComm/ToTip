@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 
 class KeyPad extends StatefulWidget {
   String service;
+  String rating;
   String total = '0';
-  KeyPad(this.service);
+  KeyPad(this.service, this.rating);
   @override
   _KeyPadState createState() => _KeyPadState();
 }
@@ -46,6 +47,7 @@ class _KeyPadState extends State<KeyPad> {
               transform: Matrix4.translationValues(0.0, -50.0, 0.0),
               child: SubmitButton(
                 service: widget.service,
+                rating: widget.rating,
                 finalAmount: double.parse(widget.total),
               ))
         ],

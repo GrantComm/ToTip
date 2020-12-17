@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:big_tip_app/widgets/ServiceCard.dart';
 import 'package:big_tip_app/classes/Transaction.dart';
+import 'package:big_tip_app/screens/Rating.dart';
 import 'package:big_tip_app/screens/Calculator.dart';
 
 class ServiceSelector extends StatefulWidget {
@@ -58,7 +59,7 @@ class _ServiceSelectorState extends State<ServiceSelector> {
 
   navigate(BuildContext context, String service) {
     Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => Calculator(
+        builder: (context) => Rating(
               service: service,
             )));
   }

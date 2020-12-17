@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:big_tip_app/widgets/TopBar.dart';
 import 'package:big_tip_app/classes/Summary.dart';
 import 'package:big_tip_app/widgets/ResultsList.dart';
+import 'package:big_tip_app/screens/Categories.dart';
 
 class Result extends StatefulWidget {
   Summary summary;
@@ -20,6 +21,10 @@ class _ResultState extends State<Result> {
             Icons.done,
             color: Colors.white,
           ),
+          function: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => Categories()));
+          },
         ),
         body: ResultsList(
           summary: widget.summary,

@@ -7,7 +7,8 @@ import 'package:big_tip_app/widgets/SubmitButton.dart';
 
 class Calculator extends StatefulWidget {
   String service;
-  Calculator({@required this.service});
+  String rating;
+  Calculator({@required this.service, this.rating});
   @override
   _CalculatorState createState() => _CalculatorState();
 }
@@ -27,7 +28,7 @@ class _CalculatorState extends State<Calculator> {
         color: Colors.white60,
         child: Column(
           children: [
-            KeyPad(widget.service),
+            KeyPad(widget.service, widget.rating),
           ],
         ),
       ),
