@@ -22,8 +22,9 @@ class _ResultState extends State<Result> {
             color: Colors.white,
           ),
           function: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => Categories()));
+            Navigator.of(context).pushAndRemoveUntil(
+                MaterialPageRoute(builder: (context) => Categories()),
+                (route) => false);
           },
         ),
         body: ResultsList(

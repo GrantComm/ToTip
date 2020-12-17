@@ -6,7 +6,6 @@ class ResultsList extends StatelessWidget {
   ResultsList({this.summary});
   @override
   Widget build(BuildContext context) {
-    print(summary.rating);
     return Container(
       child: Column(
         children: [
