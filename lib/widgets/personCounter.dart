@@ -5,9 +5,14 @@ import 'dart:io';
 class PersonCounter extends StatelessWidget {
   final int numberOfPeople;
   bool showButton;
-  final void Function(int) updateCount;
+  final void Function() updateCountUp;
+  final void Function() updateCountDown;
   PersonCounter(
-      {Key key, this.updateCount, this.showButton, this.numberOfPeople})
+      {Key key,
+      this.updateCountUp,
+      this.updateCountDown,
+      this.showButton,
+      this.numberOfPeople})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -20,7 +25,7 @@ class PersonCounter extends StatelessWidget {
               color: Theme.of(context).primaryColor,
               icon: Icon(Icons.arrow_back_ios),
               onPressed: () {
-                updateCount(-1);
+                updateCountDown();
               },
             ),
             Icon(Icons.person),
@@ -29,7 +34,7 @@ class PersonCounter extends StatelessWidget {
               color: Theme.of(context).primaryColor,
               icon: Icon(Icons.arrow_forward_ios),
               onPressed: () {
-                updateCount(1);
+                updateCountUp();
               },
             ),
           ],
@@ -38,4 +43,3 @@ class PersonCounter extends StatelessWidget {
     );
   }
 }
-

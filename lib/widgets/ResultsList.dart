@@ -52,7 +52,8 @@ class _ResultsListState extends State<ResultsList> {
             style: Theme.of(context).textTheme.bodyText1,
           ),
           PersonCounter(
-            updateCount: _updateCount(count),
+            updateCountUp: _updateCountUp,
+            updateCountDown: _updateCountDown,
             showButton: showButton,
             numberOfPeople: count,
           ),
@@ -67,14 +68,33 @@ class _ResultsListState extends State<ResultsList> {
     );
   }
 
-  _updateCount(int val) {
+  _updateCountUp() {
     setState(() {
-      count += val;
+      count++;
       if (count >= 2) {
         showButton = true;
-        print(showButton);
-        print(count);
+        return;
+      } else if (count < 0) {
+        count = 0;
+        showButton = false;
+        return;
       }
+      showButton = false;
+    });
+  }
+
+  _updateCountDown() {
+    setState(() {
+      count--;
+      if (count >= 2) {
+        showButton = true;
+        return;
+      } else if (count < 0) {
+        count = 0;
+        showButton = false;
+        return;
+      }
+      showButton = false;
     });
   }
 
