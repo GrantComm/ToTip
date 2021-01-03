@@ -32,7 +32,7 @@ class BigTip extends StatelessWidget {
   }
 }
 
-MaterialColor tangerine = MaterialColor(0xFFf7951d, color);
+MaterialColor tangerine = MaterialColor(0xFFff914d, color);
 MaterialColor jetBlack = MaterialColor(0xFF0a0a0a, color);
 
 Map<int, Color> color = {
